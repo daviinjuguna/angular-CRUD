@@ -1,11 +1,22 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <!-- <app-employee></app-employee> -->
-<div style="text-align:center">
-  <!-- <app-header><app-header>
+<!-- <div style="text-align:center"> -->
+<!-- <app-header><app-header>
     <app-header-home *ngIf="router != '/ur_route'"></app-header-home> -->
-  <h1>WELCOME TO MEAN CRUD</h1>
-</div>
+<!-- <h1>WELCOME TO MEAN CRUD</h1> -->
+<!-- </div> -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">WELCOME TO MEAN CRUD</a>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="/employee">Form</a></li>
+            <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="/result">Details</a></li>
+            <!-- <li class="nav-item"></li> -->
+        </ul>
+    </div>
+</nav>
 
-  <a routerLink="/employee" routerLinkActive="active"><button class=".btn-custom">Form</button> </a>
-  <a routerLink ="/result" routerLinkActive="active"><button class=".btn-custom">Result</button> </a>
-<router-outlet></router-outlet>
+<!-- <a routerLink="/employee" routerLinkActive="active"><button class=".btn-custom">Form</button> </a>
+<a routerLink="/result" routerLinkActive="active"><button class=".btn-custom">Result</button> </a> -->
+<router-outlet>
+</router-outlet>

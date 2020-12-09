@@ -11,44 +11,45 @@
   </div>
 
 </div> -->
-<div class ="container">
-<div class="col s5">
-  <form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
-    <div class="form-group">
-    <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="employeeService.selectedEmployee._id">
-    <div class="row">
-      <div class="input-field col s12">
-        <input type="text" name="name" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.name"  required>
-        <label>Full Name:
+<div class="container">
+    <h1>CREATE an employee</h1>
+    <div class="col s5">
+        <form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
+            <div class="form-group">
+                <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="employeeService.selectedEmployee._id">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" name="name" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.name" required>
+                        <label>Full Name:
           <label class="red-text">*</label>
-        </label>
-      </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" name="position" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.position">
+                        <label>Position :</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" name="office" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.office">
+                        <label>Office Location:</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" name="salary" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.salary">
+                        <label>Salary Per Annum:</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <button class="btn btn-outline-primary" type="button" (click)="resetForm(employeeForm)">Reset</button>
+                        <button class="btn btn-outline-danger" type="submit" [disabled]="!employeeForm.valid">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <input type="text" name="position" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.position" >
-        <label>Position :</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <input type="text" name="office" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.office" >
-        <label>Office Location:</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <input type="text" name="salary" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.salary">
-        <label>Salary Per Annum:</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <button class="btn btn-outline-primary" type="button" (click)="resetForm(employeeForm)">Reset</button>
-        <button class="btn btn-outline-danger" type="submit" [disabled]="!employeeForm.valid">Submit</button>
-      </div>
-    </div>
-  </div>
-  </form>
-</div>
 </div>
